@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 export default function Schedule() {
     return (
         <div className='w-full h-screen relative'>
-            <i className="ri-arrow-left-s-line font-bold p-1 bg-slate-100 rounded-md absolute top-[6%] left-[10%]"></i>
+            <Link to='/tracker' >
+                <i className="ri-arrow-left-s-line font-bold p-1 bg-slate-100 rounded-md absolute top-[6%] left-[10%]"></i>
+            </Link>
             <p className='text-2xl text-center font-semibold py-[38px]'>Workout Schedule</p>
 
 

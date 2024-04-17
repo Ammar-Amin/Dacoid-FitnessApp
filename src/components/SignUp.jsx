@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, redirect, useNavigate } from 'react-router-dom'
 
 export default function SignUp() {
     let [details, setDetails] = useState({
@@ -8,6 +8,10 @@ export default function SignUp() {
         email: '',
         password: '',
     })
+
+    let [checked, setChecked] = useState(false)
+
+    let navigate = useNavigate();
 
     function handleChange(e) {
         let { name, value } = e.target;
@@ -20,7 +24,23 @@ export default function SignUp() {
 
     function handleSubmit(e) {
         e.preventDefault()
-
+        if (details.firstname === '') {
+            alert('Please enter your first name');
+        } else
+            if (details.lastname === '') {
+                alert('Please enter your last name');
+            } else
+                if (details.email && details.password === '') {
+                    alert('Somethings missing eather email OR password ');
+                } else
+                    if (checked == false) {
+                        alert('Check the box to proceed farther');
+                    } else
+                        if (details.firstname && details.lastname && details.email && details.password && checked) {
+                            localStorage.setItem('details', JSON.stringify(details))
+                            console.log(details)
+                            navigate('/login')
+                        }
     }
 
     return (
@@ -64,14 +84,16 @@ export default function SignUp() {
                     </div>
 
                     <div className='my-5 flex items-center'>
-                        <input type='checkbox' className='w-4 h-4' />
+                        <input type='checkbox' className='w-4 h-4' checked={checked} onChange={() => setChecked(!checked)} />
                         <span className='ml-1 text-[1.8vh] text-slate-600'>By prodeeding, I agree to all <span className='text-blue-400 underline'>T&C</span> and <span className='text-blue-400 underline'>Privacy Policy</span></span>
                     </div>
 
                     <div className='w-full absolute bottom-[-120%]'>
-                        <Link to='/login'>
-                            <input type='submit' value='Create an Account' className='w-full p-2 text-center text-white bg-gradient-to-r from-[#95BEFF] to-[#7B91FF] font-bold rounded-lg' />
-                        </Link>
+                        <input
+                            type='submit'
+                            value='Create an Account'
+                            className='w-full p-2 text-center text-white bg-gradient-to-r from-[#95BEFF] to-[#7B91FF] font-bold rounded-lg'
+                        />
 
                         <div className='flex justify-center items-center'>
                             <div className='w-[50%] h-[1px] bg-slate-400 mt-1'></div>

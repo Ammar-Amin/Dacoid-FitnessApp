@@ -8,7 +8,9 @@ import graph from '../assets/proj-img/graph.png'
 export default function Tracker() {
     return (
         <div className='w-full h-screen relative'>
-            <i className="ri-arrow-left-s-line font-bold p-1 bg-slate-100 rounded-md absolute top-[6%] left-[10%]"></i>
+            <Link to='/goal' >
+                <i className="ri-arrow-left-s-line font-bold p-1 bg-slate-100 rounded-md absolute top-[6%] left-[10%]"></i>
+            </Link>
             <p className='text-2xl text-center font-semibold pt-[38px] pb-[20px]'>Workout Tracker</p>
 
 
@@ -20,10 +22,10 @@ export default function Tracker() {
                 </Link>
 
                 <div className='flex p-2 bg-gradient-to-r from-[#dbe3ff] to-white rounded-lg'>
-                    <i className="ri-alert-line text-2xl mt-1 mr-2 text-[#8099FF]"></i>
-                    <div className='text-[14px]'>
+                    <i className="ri-alert-line text-2xl mr-2 text-[#8099FF]"></i>
+                    <div className='text-[12px]'>
                         <p>You've burned fewer calories than</p>
-                        <p className='mt-[-4px]'>yesterday. Time to get moving!</p>
+                        <p className='mt-[-4px]' >yesterday. Time to get moving!</p>
                     </div>
                 </div>
 

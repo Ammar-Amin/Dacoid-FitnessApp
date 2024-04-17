@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function LogIn() {
 
@@ -8,17 +8,34 @@ export default function LogIn() {
         password: ''
     })
 
+    let navigate = useNavigate()
+
     function handleChange(e) {
         let { name, value } = e.target;
-        console.log(name, value)
+        // console.log(name, value)
         setInfo({ ...info, [name]: value })
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        // console.log(localStorage.getItem('details'))
+        let details = JSON.parse(localStorage.getItem('details'))
+        console.log(details.email, details.password)
+        if (info.email !== details.email) {
+            alert("Email doesn't match the previous email")
+        } else if (info.password !== details.password) {
+            alert("Password doesn't match the previous password")
+        } else {
+            navigate('/goal')
+        }
+
     }
 
     return (
         <div>
             <p className='text-xl font-bold m-5 pb-4'>Welcome Back</p>
             <div className='w-[90%] m-auto relative'>
-                <form>
+                <form onSubmit={handleSubmit} >
                     <div className='flex flex-col gap-4'>
                         <input
                             type='email'
@@ -42,9 +59,9 @@ export default function LogIn() {
 
 
                     <div className='w-full absolute top-[300%]'>
-                        <Link to='/goal'>
-                            <input type='submit' value='Sign In' className='w-full p-2 text-center text-white bg-gradient-to-r from-[#95BEFF] to-[#7B91FF] font-bold rounded-lg' />
-                        </Link>
+                        {/* <Link to='/goal'> */}
+                        <input type='submit' value='Sign In' className='w-full p-2 text-center text-white bg-gradient-to-r from-[#95BEFF] to-[#7B91FF] font-bold rounded-lg' />
+                        {/* </Link> */}
 
                         <div className='flex justify-center items-center'>
                             <div className='w-[50%] h-[1px] bg-slate-400 mt-1'></div>
