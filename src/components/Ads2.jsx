@@ -19,7 +19,7 @@ export default function Ads2() {
 
             <div className='absolute right-[10%] bottom-[10%]'>
                 <Link to='/signup' >
-                    <i class="ri-arrow-right-s-line p-4 text-2xl font-bold text-white bg-gradient-to-r from-[#DEE5FF] to-[#809AFF] rounded-full"></i>
+                    <i className="ri-arrow-right-s-line p-4 text-2xl font-bold text-white bg-gradient-to-r from-[#DEE5FF] to-[#809AFF] rounded-full"></i>
                 </Link>
             </div>
 
