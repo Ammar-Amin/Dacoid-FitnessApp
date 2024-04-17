@@ -9,9 +9,9 @@ export default function Tracker() {
     return (
         <div className='w-full h-screen relative'>
             <Link to='/goal' >
-                <i className="ri-arrow-left-s-line font-bold p-1 bg-slate-100 rounded-md absolute top-[6%] left-[10%]"></i>
+                <i className="ri-arrow-left-s-line font-bold p-1 bg-slate-100 rounded-md absolute top-[2%] left-[10%]"></i>
             </Link>
-            <p className='text-2xl text-center font-semibold pt-[38px] pb-[20px]'>Workout Tracker</p>
+            <p className='text-2xl text-center font-semibold pt-[10px] pb-[20px]'>Workout Tracker</p>
 
 
             <div className='w-[90%] m-auto'>
@@ -90,7 +90,9 @@ export default function Tracker() {
             <div className='w-full flex justify-between text-3xl p-4 text-slate-600 bg-white fixed bottom-0'>
                 <div className='w-[30%] ml-[10px] flex justify-between'>
                     <i className="ri-home-2-line"></i>
-                    <i className="ri-nodejs-fill"></i>
+                    <Link to='/schedule' >
+                        <i className="ri-nodejs-fill"></i>
+                    </Link>
                 </div>
 
 

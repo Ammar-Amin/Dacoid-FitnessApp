@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 export default function Goals() {
     return (
-        <div className='w-full h-screen relative'>
-            <p className='text-2xl text-center font-semibold py-9'>What are your goals?</p>
+        <div className='w-full relative'>
+            <p className='text-2xl text-center font-semibold pt-2 pb-6'>What are your goals?</p>
             <div className='w-[90%] m-auto'>
-                <form>
+                <form >
                     <div className='flex flex-col gap-4'>
                         <div className='px-4 py-3 font-semibold bg-gray-100 rounded-lg flex justify-between items-center'>
                             <span className='ml-1 text-[1.8vh] text-slate-600'>Weight Loss</span>
@@ -34,7 +34,7 @@ export default function Goals() {
                         </div>
                     </div>
 
-                    <div className='w-[90%] absolute bottom-[8%]'>
+                    <div className='w-[90%] absolute top-[130%]'>
                         <Link to='/tracker'>
                             <input type='submit' value='Confirm' className='w-full p-2 text-center text-white bg-gradient-to-r from-[#95BEFF] to-[#7B91FF] font-bold rounded-lg' />
                         </Link>

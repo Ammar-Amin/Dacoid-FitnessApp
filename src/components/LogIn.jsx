@@ -33,7 +33,7 @@ export default function LogIn() {
 
     return (
         <div>
-            <p className='text-xl font-bold m-5 pb-4'>Welcome Back</p>
+            <p className='text-xl font-semibold m-3 pb-4'>Welcome Back</p>
             <div className='w-[90%] m-auto relative'>
                 <form onSubmit={handleSubmit} >
                     <div className='flex flex-col gap-4'>
@@ -58,7 +58,7 @@ export default function LogIn() {
                     <span className='mt-[10px] ml-3 text-[1.8vh] text-slate-600 underline'>Forgot your password?</span>
 
 
-                    <div className='w-full absolute top-[300%]'>
+                    <div className='w-full absolute top-[280%]'>
                         {/* <Link to='/goal'> */}
                         <input type='submit' value='Sign In' className='w-full p-2 text-center text-white bg-gradient-to-r from-[#95BEFF] to-[#7B91FF] font-bold rounded-lg' />
                         {/* </Link> */}

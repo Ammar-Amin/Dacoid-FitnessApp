@@ -45,14 +45,14 @@ export default function SignUp() {
 
     return (
         <div>
-            <p className='text-xl font-bold m-5 pb-4'>Create an account</p>
+            <p className='text-xl font-semibold m-3 pb-4'>Create an account</p>
             <div className='w-[90%] m-auto relative'>
                 <form onSubmit={handleSubmit}>
                     <div className='flex flex-col gap-4'>
                         <input
                             type='text'
                             placeholder='First Name'
-                            className='px-4 py-2 bg-gray-100 border-none outline-none rounded-lg'
+                            className='px-4 py-[7px] bg-gray-100 border-none outline-none rounded-lg'
                             name='firstname'
                             value={details.firstname}
                             onChange={handleChange}
@@ -60,7 +60,7 @@ export default function SignUp() {
                         <input
                             type='text'
                             placeholder='Last Name'
-                            className='px-4 py-2 bg-gray-100 border-none outline-none rounded-lg'
+                            className='px-4 py-[7px] bg-gray-100 border-none outline-none rounded-lg'
                             name='lastname'
                             value={details.lastname}
                             onChange={handleChange}
@@ -68,7 +68,7 @@ export default function SignUp() {
                         <input
                             type='email'
                             placeholder='Email'
-                            className='px-4 py-2 bg-gray-100 border-none outline-none rounded-lg'
+                            className='px-4 py-[7px] bg-gray-100 border-none outline-none rounded-lg'
                             name='email'
                             value={details.email}
                             onChange={handleChange}
@@ -76,16 +76,16 @@ export default function SignUp() {
                         <input
                             type='password'
                             placeholder='Password'
-                            className='px-4 py-2 bg-gray-100 border-none outline-none rounded-lg'
+                            className='px-4 py-[7px] bg-gray-100 border-none outline-none rounded-lg'
                             name='password'
                             value={details.password}
                             onChange={handleChange}
                         />
                     </div>
 
-                    <div className='my-5 flex items-center'>
+                    <div className='my-4 flex items-center'>
                         <input type='checkbox' className='w-4 h-4' checked={checked} onChange={() => setChecked(!checked)} />
-                        <span className='ml-1 text-[1.8vh] text-slate-600'>By prodeeding, I agree to all <span className='text-blue-400 underline'>T&C</span> and <span className='text-blue-400 underline'>Privacy Policy</span></span>
+                        <span className='ml-1 text-[11px] text-slate-600'>By prodeeding, I agree to all <span className='text-blue-400 underline'>T&C</span> and <span className='text-blue-400 underline'>Privacy Policy</span></span>
                     </div>
 
                     <div className='w-full absolute bottom-[-120%]'>
